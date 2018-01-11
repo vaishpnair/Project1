@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import POM.Homepage;
 
 public class BaseTest  {
-	
+	public WebDriver driver;
 @BeforeMethod
 public void setup(){
 	System.setProperty("webdriver.gecko.driver","./drivers/geckodriver");

@@ -15,7 +15,7 @@ public class ReadGuru99ExcelFile {
 
 	    //Create an object of File class to open xlsx file
 
-	    File file =    new File(filePath+"\\"+fileName);
+	    File file =    new File(filePath+"/"+fileName);
 
 	    //Create an object of FileInputStream class to read excel file
 
@@ -33,7 +33,7 @@ public class ReadGuru99ExcelFile {
 	    int rowCount = guru99Sheet.getLastRowNum()-guru99Sheet.getFirstRowNum();
 	    for (int i = 0; i < rowCount; i++) {
 	    	Row row = guru99Sheet.getRow(i);
-	    	   for (int j = 0; j < row.getLastCellNum(); j++) {
+	    	for (int j = 0; j < row.getLastCellNum(); j++) {
 	    		   value=row.getCell(j).getStringCellValue();
 	    		   
 	    		   

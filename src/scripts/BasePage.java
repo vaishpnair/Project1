@@ -6,11 +6,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-public class BasePage {
-	public WebDriver driver;
-	public BasePage(WebDriver driver){
-		this.driver=driver;
-	}
+public class BasePage extends BaseTest {
+	 
+//	public BasePage(WebDriver driver){
+//		this.driver=driver;
+//	}
 	public void verifytitle(String title){
 		WebDriverWait wait=new WebDriverWait(driver, 10);
 		try{
@@ -19,7 +19,7 @@ public class BasePage {
 		}
 		catch(Exception e){
 			
-			Assert.fail("title is not matching");
+			Reporter.log("title is not matching",true);
 		}
 	}
 }

@@ -9,9 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import scripts.BasePage;
 
-//google homepage
+
 public class Homepage {
-	public WebDriver driver;
+	public WebDriver driver; 
 	
 //div[@class='tsf-p']/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[@id='lst-ib']
 @FindBy(xpath="//div[@class='tsf-p']/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[@id='lst-ib']")
@@ -28,12 +28,17 @@ public void searchfunc() throws IOException{
     ReadGuru99ExcelFile objExcelFile = new ReadGuru99ExcelFile();
   //Prepare the path of excel file
 
-    String filePath = System.getProperty("user.dir")+"\\Excel";
-
+    String filePath = System.getProperty("user.dir")+"/Excel";
+    String val=objExcelFile.readExcel(filePath,"excelproj1.xlsx","testsheet");
     //Call read file method of the class to read data
-    searchfield.sendKeys(objExcelFile.readExcel(filePath,"excelproj1.xlsx","testsheet"));
+    searchfield.sendKeys(val);
     
 }
+//public String verification(){
+//	String title=driver.getTitle();
+//	return title;
+//	
+//}
 }
 
 

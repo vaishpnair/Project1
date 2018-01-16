@@ -11,7 +11,7 @@ public class BaseTest  {
 	public WebDriver driver;                                                                                                                    
 @BeforeMethod
 public void setup(){
-	System.setProperty("webdriver.gecko.driver","./drivers/geckodriver");
+	System.setProperty("webdriver.gecko.driver","./drivers/geckodriver.exe");
 	driver=new FirefoxDriver();
 	driver.get("https://www.google.co.in/");
 	driver.manage().window().maximize();
@@ -19,6 +19,6 @@ public void setup(){
 }
 @AfterMethod
 public void teardown(){
-	driver.close();
+	driver.quit();
 }
 }

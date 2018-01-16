@@ -12,7 +12,7 @@ public class BasePage extends BaseTest {
 //		this.driver=driver;
 //	}
 	public void verifytitle(String title){
-		WebDriverWait wait=new WebDriverWait(driver, 10);
+		WebDriverWait wait=new WebDriverWait(driver, 5);
 		try{
 			wait.until(ExpectedConditions.titleContains(title));
 			Reporter.log("title is matching",true);

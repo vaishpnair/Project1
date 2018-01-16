@@ -14,24 +14,30 @@ public class Homepage {
 	public WebDriver driver; 
 	
 //div[@class='tsf-p']/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[@id='lst-ib']
-@FindBy(xpath="//div[@class='tsf-p']/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[@id='lst-ib']")
-private WebElement searchfield;
+//@FindBy(xpath="//div[@class='tsf-p']/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[@id='lst-ib']")
+//private WebElement searchfield;
 
-public Homepage(WebDriver driver){
-	this.driver=driver;
-	PageFactory.initElements(driver,this);
-}
+//public Homepage(WebDriver driver){
+//	this.driver=driver;
+//	PageFactory.initElements(driver,this);
+//}
 
-public void searchfunc() throws IOException{
+public void searchfunc_old() throws IOException, InterruptedException{
 	
 	//Create an object of ReadGuru99ExcelFile class
-    ReadGuru99ExcelFile objExcelFile = new ReadGuru99ExcelFile();
+    ReadGuru99ExcelFile objExcelFile = new ReadGuru99ExcelFile(driver);
   //Prepare the path of excel file
 
-    String filePath = System.getProperty("user.dir")+"/Excel";
-    String val=objExcelFile.readExcel(filePath,"excelproj1.xlsx","testsheet");
+//    String filePath = System.getProperty("user.dir")+"/Excel";
+//    String val[]=	objExcelFile.readExcel(filePath,"excelproj1.xlsx","testsheet");
     //Call read file method of the class to read data
-    searchfield.sendKeys(val);
+    
+//    for(int i=0;i<val.length;i++){
+//    	System.out.println(val[i]);
+//
+//    Thread.sleep(3000);
+//    
+//    }
     
 }
 //public String verification(){
